@@ -161,7 +161,7 @@ tbody {
 .table-sticky {
     display: block;
     overflow-y: scroll;
-    width: 80%;
+    width: 90%;
     height: 40vh;
     margin: auto;
 }
