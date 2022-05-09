@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--互換モードが利用できる場合適用-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="modules/lodash.min.js"></script>
+    <script type="text/javascript" src="modules/test-boilerplate.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <link rel="stylesheet" href="css/nomu_days.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/chartjs-plugin-colorschemes"></script>
+    <title>運行管理システム</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <p>（仮）運行管理システム 日毎の情報ページ</p>
+        <a href="index.html">TOPページへ</a>
+
+    </header>
+
+    <main>
+        <h3>Input Area</h3>
+        <div class="main-select">
+            <div class="select1">
+                <label>号車選択</label>
+                <select name="car_no" id="cars">
+                            <option value="1" hidden>選択してください</option>
+                </select>
+            </div>
+            <div class="select1">
+                <label>日付選択</label>
+                <input type="date" name="day" id="notSelected">
+            </div>
+        </div>
+
+        <p class="border"></p>
+        <h3>Display Area</h3>
+        <div class="container">
+            <div class="box11">
+                <p class="p1">Average 電費</p>
+
+                <p class="p2" id="denpi">- (Wh/km)</p>
+
+            </div>
+            <div class="box11">
+                <p class="p1">Total CO2削減量</p>
+
+                <p class="p2" id="co2">- (t)</p>
+
+            </div>
+        </div>
+        <p class="border"></p>
+
+
+        <h3>Table Area</h3>
+
+        <div class="table-sticky table-sticky1 table">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">時間</th>
+                        <th scope="col">電費(Wh/km)</th>
+                        <th scope="col">CO2削減量(t)</th>
+                        <th scope="col">走行時間(分)</th>
+                        <th scope="col">アイドル時間(分)</th>
+                        <th scope="col">走行距離(km)</th>
+                        <th scope="col">SOC(%)</th>
+                    </tr>
+                </thead>
+                <tbody id="targetTable"></tbody>
+            </table>
+        </div>
+        <div class="border"></div>
+
+        <h3>Graph Area</h3>
+
+        <div id="content1">
+            <canvas id="graph-area1"></canvas>
+        </div>
+
+        <div id="content2">
+            <canvas id="graph-area2"></canvas>
+        </div>
+
+        <div class="border"></div>
+
+        <h3>Map Area</h3>
+
+        <div id="content-map">
+            <div id="view_map"></div>
+        </div>
+
+    </main>
+
+    <script type="text/javascript" src="js/createDayData.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+* {
+    /* ブラウザ全体の余白を消す */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: relative;
+    background-color: rgb(3, 187, 126);
+    height: 7vh;
+    top: 0;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 3;
+}
+
+.header p {
+    position: absolute;
+    top: 50%;
+    font-size: 3vh;
+    transform: translate( 0%, -50%);
+    color: rgb(255, 255, 255);
+}
+
+.header a {
+    position: absolute;
+    font-size: 1.5vh;
+    right: 2vh;
+    bottom: 1vh;
+}
+
+body {
+    /* margin-top: 57vh; */
+    /* height: 100%; */
+    /* top: 7%; */
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    /* height: 50vh; */
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+    top: 7%;
+    left: 0;
+    z-index: 3;
+}
+
+h3 {
+    font-size: 2vw;
+    padding-top: 0.5vh;
+    padding-left: 2vh;
+    margin-bottom: 0.5vh;
+    color: darkgrey;
+}
+
+.main-select {
+    justify-content: center;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+}
+
+.select1 select {
+    display: block;
+    width: 25vw;
+    height: 6vh;
+    background-color: rgba(240, 240, 240, 0.5);
+    border-bottom: solid 2px rgb(87, 85, 85);
+    box-shadow: 4px 2px 4px rgb(199, 199, 199);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 1vh;
+    font-size: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.select1 label {
+    color: rgb(145, 143, 143);
+    margin-left: 2.5vh;
+    font-size: 2.5vh;
+}
+
+.select1 input {
+    display: block;
+    width: 25vw;
+    height: 5.8vh;
+    background-color: rgba(240, 240, 240, 0.5);
+    border-bottom: solid 2px rgb(87, 85, 85);
+    box-shadow: 4px 2px 4px rgb(199, 199, 199);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 1vh;
+    font-size: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.container {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 16vh;
+}
+
+.box11 {
+    padding: 0.5em 1em;
+    margin: 2vh;
+    width: 30vh;
+    height: 10vh;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.22);
+}
+
+.p1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2vh;
+    text-align: center;
+}
+
+.p2 {
+    margin: 0;
+    padding: 0;
+    font-size: 4vh;
+    text-align: center;
+}
+
+.border {
+    border-bottom: solid 2px rgb(185, 185, 185);
+    box-shadow: 10px 2px 4px rgb(199, 199, 199);
+    margin-top: 4vh;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+}
+
+th,
+td {
+    font-size: 2.4vh;
+    width: 100vh;
+    border-bottom: 1px solid rgb(126, 126, 126);
+}
+
+tbody {
+    text-align: center;
+}
+
+.table-sticky {
+    display: block;
+    overflow-y: scroll;
+    width: 80%;
+    height: 40vh;
+    margin: auto;
+}
+
+.table-sticky thead th {
+    font-size: 1.2w;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    border-top: #FFFFFF;
+    color: rgb(100, 100, 100)
+}
+
+.table-sticky1 tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: rgb(255, 255, 255);
+    border-top: #FFFFFF;
+    color: rgb(100, 100, 100)
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: 0 0 3px #ffffff inset;
+    background: #95959591;
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 0 0 3px #ffffff inset;
+    background: rgb(224, 224, 224);
+    border-radius: 7px;
+}
+
+#content1 {
+    width: 90%;
+    height: 40vh;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#graph-area1 {
+    margin-bottom: 1vh;
+    z-index: 1;
+}
+
+#content2 {
+    width: 90%;
+    height: 40vh;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#graph-area2 {
+    margin-bottom: 1vh;
+    z-index: 1;
+}
+
+#content-map {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#view_map {
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+    height: 75vh;
+    z-index: 1;
+}
