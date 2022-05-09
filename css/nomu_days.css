@@ -149,7 +149,7 @@ table {
 
 th,
 td {
-    font-size: 2.4vh;
+    font-size: 1.7vh;
     width: 100vh;
     border-bottom: 1px solid rgb(126, 126, 126);
 }
@@ -167,7 +167,7 @@ tbody {
 }
 
 .table-sticky thead th {
-    font-size: 2.4vh;
+    font-size: 1.7vh;
     position: sticky;
     top: 0;
     z-index: 2;
